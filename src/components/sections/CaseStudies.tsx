@@ -71,7 +71,7 @@ export function CaseStudies() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative w-full py-24 px-6 md:px-12 bg-[#0A111A] overflow-hidden">
+    <section ref={containerRef} className="relative w-full py-32 px-6 md:px-12 bg-[#0A111A] overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#1A252F] to-[#0A111A] opacity-50 pointer-events-none" />
       
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center relative z-10">
@@ -87,7 +87,7 @@ export function CaseStudies() {
           <div className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 text-sm font-semibold tracking-wide text-gray-300 border border-white/10 w-fit">
             Commercial Impact
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-8 text-white leading-[1.1] tracking-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-8 text-white leading-[1.1] tracking-[-0.04em]">
             Proof of <br className="hidden md:block"/>
             <span className="text-[var(--brand-teal)]">Excellence.</span>
           </h2>
@@ -97,7 +97,7 @@ export function CaseStudies() {
             {/* Metric 1 */}
             <div className="flex flex-col border-l-2 border-[var(--brand-teal)]/30 pl-6 relative">
                <div className="absolute -left-[5px] top-2 w-2 h-2 rounded-full bg-[var(--brand-teal)]" />
-               <h3 className="text-5xl md:text-6xl font-heading font-bold text-white tracking-tight flex items-baseline">
+             <h3 className="text-6xl md:text-7xl font-heading font-bold text-white tracking-tight flex items-baseline" style={{ textShadow: "0 0 30px rgba(22,160,133,0.35)" }}>
                  +<span ref={roasRef}>0</span>%
                </h3>
                <p className="text-gray-400 text-lg mt-2 font-medium">ROAS Improvement</p>
@@ -106,7 +106,7 @@ export function CaseStudies() {
             {/* Metric 2 */}
             <div className="flex flex-col border-l-2 border-[var(--brand-blue)]/50 pl-6 relative">
                <div className="absolute -left-[5px] top-2 w-2 h-2 rounded-full bg-[var(--brand-blue)]" />
-               <h3 className="text-5xl md:text-6xl font-heading font-bold text-white tracking-tight flex items-baseline">
+               <h3 className="text-6xl md:text-7xl font-heading font-bold text-white tracking-tight flex items-baseline" style={{ textShadow: "0 0 30px rgba(52,152,219,0.35)" }}>
                  +<span ref={convRef}>0</span>%
                </h3>
                <p className="text-gray-400 text-lg mt-2 font-medium">Conversion Increase</p>
@@ -115,7 +115,7 @@ export function CaseStudies() {
             {/* Metric 3 */}
             <div className="flex flex-col border-l-2 border-green-500/50 pl-6 relative">
                <div className="absolute -left-[5px] top-2 w-2 h-2 rounded-full bg-green-500" />
-               <div className="flex items-center gap-4 text-5xl md:text-6xl font-heading font-bold text-white tracking-tight">
+               <div className="flex items-center gap-4 text-6xl md:text-7xl font-heading font-bold text-white tracking-tight" style={{ textShadow: "0 0 30px rgba(74,222,128,0.3)" }}>
                  <span ref={lhStartRef} className="text-red-400">0</span>
                  <span className="text-3xl text-gray-600 block translate-y-[-5px]">&rarr;</span>
                  <span ref={lhEndRef} className="text-green-400">0</span><span className="text-green-400 text-4xl">+</span>
@@ -134,25 +134,66 @@ export function CaseStudies() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.2, type: "spring", bounce: 0.2 }}
         >
-          <div className="relative w-full aspect-square md:aspect-[4/3] lg:aspect-video rounded-3xl glass-panel-dark border border-[rgba(255,255,255,0.05)] shadow-2xl flex flex-col items-center justify-center p-8 text-center group overflow-hidden bg-white/5">
-             <div className="absolute inset-0 bg-[var(--brand-teal)]/10 blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-             
-             {/* Wireframe Placeholder Visual */}
-             <div className="w-16 h-16 rounded-2xl bg-[#1A252F] border border-[#2C3E50] shadow-lg flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-[var(--brand-teal)]/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-             </div>
-             <h4 className="text-2xl font-bold text-gray-300 font-heading tracking-tight mb-2">High-Res Project Canvas</h4>
-             <p className="text-gray-500 text-sm max-w-sm">Replace this block inside layout with real-world technical charts, lighthouse graphs, or heatmaps demonstrating the outcome.</p>
-             
-             {/* Faux UI Skeleton inside placeholder */}
-             <div className="absolute bottom-[-10%] left-1/2 -translate-x-1/2 w-[80%] h-[40%] bg-[#121A23] rounded-t-2xl border-t border-x border-[#2C3E50]/50 shadow-2xl opacity-50 flex gap-4 p-6 pointer-events-none">
-                 <div className="h-full w-1/3 bg-gray-600/20 rounded-lg" />
-                 <div className="flex flex-col gap-3 flex-1">
-                    <div className="h-4 w-full bg-gray-600/20 rounded-full" />
-                    <div className="h-4 w-3/4 bg-gray-600/20 rounded-full" />
+          <div className="relative w-full aspect-square md:aspect-[4/3] lg:aspect-video rounded-3xl border border-[rgba(255,255,255,0.07)] shadow-2xl overflow-hidden bg-[#0D1720] flex flex-col">
+             {/* Top accent stripe */}
+             <div className="h-1 w-full bg-gradient-to-r from-[#16A085] via-[#1ABC9C] to-transparent flex-shrink-0" />
+
+             <div className="flex flex-col h-full p-7 md:p-8 relative overflow-hidden">
+               {/* Background glow */}
+               <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#16A085]/8 rounded-full blur-[80px] pointer-events-none" />
+
+               {/* Card header */}
+               <div className="flex items-start justify-between mb-5 relative z-10">
+                 <div>
+                   <div className="flex items-center gap-2 mb-2">
+                     <span className="text-[10px] font-bold tracking-widest uppercase text-[#16A085] bg-[#16A085]/10 border border-[#16A085]/25 px-2.5 py-1 rounded-full">Project Spotlight</span>
+                     <span className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider">Renewable Energy</span>
+                   </div>
+                   <h4 className="text-xl md:text-2xl font-black text-white tracking-[-0.03em] leading-snug">
+                     QLD Solar: Scaling<br />Residential Installs.
+                   </h4>
                  </div>
+                 <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#16A085]/10 border border-[#16A085]/20 flex items-center justify-center">
+                   <svg className="w-5 h-5 text-[#16A085]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                   </svg>
+                 </div>
+               </div>
+
+               {/* Primary metric — with baseline for magnitude */}
+               <div className="mb-5 relative z-10">
+                 <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-widest mb-1.5">
+                   Previously averaging <span className="text-gray-400">11 enquiries/mo.</span> &rarr; Now:
+                 </p>
+                 <div className="flex items-baseline gap-2">
+                   <span className="text-5xl md:text-6xl font-black text-white tracking-tight" style={{ textShadow: "0 0 30px rgba(22,160,133,0.4)" }}>+41</span>
+                   <div className="flex flex-col">
+                     <span className="text-[#16A085] font-bold text-sm leading-tight">booked site</span>
+                     <span className="text-[#16A085] font-bold text-sm leading-tight">assessments</span>
+                   </div>
+                 </div>
+                 <p className="text-gray-500 text-xs font-medium mt-1 tracking-wide">in 90 days post-audit &middot; Zero additional ad spend</p>
+               </div>
+
+               {/* Before / After table */}
+               <div className="relative z-10 flex-1 flex flex-col justify-end">
+                 <div className="grid grid-cols-3 gap-1 mb-2">
+                   <span className="text-[9px] text-gray-600 uppercase tracking-widest font-semibold">Metric</span>
+                   <span className="text-[9px] text-gray-600 uppercase tracking-widest font-semibold text-center">Before</span>
+                   <span className="text-[9px] text-[#16A085] uppercase tracking-widest font-semibold text-center">After</span>
+                 </div>
+                 {[
+                   { label: "LCP", before: "4.1s", after: "0.9s" },
+                   { label: "Form CVR", before: "1.2%", after: "4.7%" },
+                   { label: "Mobile Bounce", before: "71%", after: "28%" },
+                 ].map((row) => (
+                   <div key={row.label} className="grid grid-cols-3 gap-1 py-2 border-t border-white/[0.04]">
+                     <span className="text-xs font-semibold text-gray-400">{row.label}</span>
+                     <span className="text-xs font-medium text-red-400/80 text-center">{row.before}</span>
+                     <span className="text-xs font-bold text-[#16A085] text-center">{row.after}</span>
+                   </div>
+                 ))}
+               </div>
              </div>
           </div>
         </motion.div>

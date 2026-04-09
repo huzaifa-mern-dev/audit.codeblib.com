@@ -45,22 +45,31 @@ export function Hero() {
         >
           <motion.div variants={itemVariants} className="mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-sm font-semibold tracking-wide text-gray-200 border border-white/10 backdrop-blur-sm self-start shadow-sm">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            Vetted Top-Rated CRO Experts
+            Solar & Construction CRO Specialists
           </motion.div>
 
           <motion.h1 
             variants={itemVariants} 
-            className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-white leading-[1.15] tracking-tight"
+            className="text-4xl md:text-5xl lg:text-6xl font-black mb-4 text-white leading-[1.12] tracking-[-0.03em]"
           >
-            Your Website is Leaking <br className="hidden lg:block" />
-            <span className="text-[var(--brand-teal)] text-gradient-brand">10-30%</span> of its Conversion Potential.
+            Every week your site is slow, a competitor books{" "}
+            <span className="text-gradient-brand">the job you quoted.</span>
           </motion.h1>
+
+          <motion.p
+            variants={itemVariants}
+            className="text-sm font-semibold text-[var(--brand-teal)] tracking-wide mb-5 uppercase"
+          >
+            Trusted by Solar &amp; Construction businesses across Australia.
+          </motion.p>
 
           <motion.p 
             variants={itemVariants} 
-            className="text-lg md:text-xl text-gray-300 opacity-90 mb-8 leading-relaxed font-medium max-w-lg"
+            className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed font-medium max-w-lg"
           >
-            Conversion leakage rarely comes from traffic alone. It stems from technical friction, slow load times, and misaligned intent.
+            Right now, your site is losing{" "}
+            <span className="text-white font-semibold">10–30% of enquiries and high-value jobs</span>{" "}
+            per month — to competitors with faster sites, cleaner funnels, and aligned intent.
           </motion.p>
           
           <motion.div variants={itemVariants} className="w-full flex">
@@ -69,7 +78,7 @@ export function Hero() {
         </motion.div>
 
         {/* Right Side: Direct Audit Form */}
-        <div className="w-full h-full flex items-center justify-center lg:justify-end relative">
+        <div id="hero-form" className="w-full h-full flex items-center justify-center lg:justify-end relative">
           <AuditForm />
         </div>
 

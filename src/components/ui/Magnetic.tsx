@@ -15,8 +15,8 @@ export function Magnetic({ children, intensity = 0.5 }: MagneticProps) {
     const el = magneticRef.current;
     if (!el) return;
     
-    const xTo = gsap.quickTo(el, "x", { duration: 1.2, ease: "elastic.out(1.2, 0.2)" });
-    const yTo = gsap.quickTo(el, "y", { duration: 1.2, ease: "elastic.out(1.2, 0.2)" });
+    const xTo = gsap.quickTo(el, "x", { duration: 1.0, ease: "elastic.out(1, 0.3)" });
+    const yTo = gsap.quickTo(el, "y", { duration: 1.0, ease: "elastic.out(1, 0.3)" });
 
     const mouseMove = (e: MouseEvent) => {
       const { clientX, clientY } = e;

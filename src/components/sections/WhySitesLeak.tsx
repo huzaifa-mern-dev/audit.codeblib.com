@@ -59,7 +59,7 @@ export function WhySitesLeak() {
   };
 
   return (
-    <section className="relative w-full py-24 px-6 md:px-12 bg-[#1A252F] overflow-hidden">
+    <section className="relative w-full py-32 px-6 md:px-12 bg-[#1A252F] overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
         
         {/* Left Side: Context / Hook */}
@@ -73,7 +73,7 @@ export function WhySitesLeak() {
           <div className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--brand-teal)]/10 text-sm font-semibold tracking-wide text-[var(--brand-teal)] border border-[var(--brand-teal)]/20 w-fit">
             The Problem
           </div>
-          <h2 className="text-4xl md:text-5xl font-black mb-6 text-white leading-[1.15] tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-black mb-6 text-white leading-[1.15] tracking-[-0.04em]">
             Why High-Traffic Sites <span className="text-gradient-brand">Leak Revenue</span>
           </h2>
           <p className="text-lg text-gray-400 leading-relaxed font-medium">
