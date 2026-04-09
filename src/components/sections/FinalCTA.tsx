@@ -87,7 +87,7 @@ export function FinalCTA() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#16A085] opacity-60" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-[#16A085]" />
           </span>
-          Free Audit — Limited Spots
+          Revenue Leak Mapping™ — Free Audit
         </motion.div>
 
         {/* Main headline — -0.03em tracking strictly enforced */}
@@ -100,8 +100,8 @@ export function FinalCTA() {
           style={{ letterSpacing: "-0.03em" }}
           className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.06] mb-7"
         >
-          Ready to Plug Your{" "}
-          <span className="text-gradient-brand">Conversion Leaks?</span>
+          Ready to Stop Losing{" "}
+          <span className="text-gradient-brand">Enquiries Before Contact?</span>
         </motion.h2>
 
         {/* Sub-headline */}
@@ -134,6 +134,42 @@ export function FinalCTA() {
             We limit reviews to <span className="text-white">4 businesses per month</span> to ensure depth.{" "}
             <span className="text-amber-300 font-bold">2 spots remaining for April.</span>
           </p>
+        </motion.div>
+
+        {/* Risk reversal guarantee blocks */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          custom={0.28}
+          viewport={{ once: true, margin: "-60px" }}
+          className="mb-8 w-full max-w-lg mx-auto flex flex-col gap-2.5"
+        >
+          {[
+            {
+              icon: (
+                <svg className="w-3.5 h-3.5 text-[#16A085]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+              ),
+              text: "No sales calls. This audit is a standalone technical document. No follow-up unless you request it.",
+            },
+            {
+              icon: (
+                <svg className="w-3.5 h-3.5 text-[#16A085]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+                </svg>
+              ),
+              text: "If no clear revenue loss is identified, we won't pitch our services. We only work where we can prove massive upside.",
+            },
+          ].map((item, i) => (
+            <div key={i} className="flex items-start gap-3 text-left px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06]">
+              <div className="flex-shrink-0 w-6 h-6 rounded-lg bg-[#16A085]/10 border border-[#16A085]/20 flex items-center justify-center mt-px">
+                {item.icon}
+              </div>
+              <p className="text-gray-400 text-[12px] font-medium leading-snug">{item.text}</p>
+            </div>
+          ))}
         </motion.div>
 
         {/* Magnetic CTA button */}

@@ -5,6 +5,7 @@ import { CaseStudies } from "@/components/sections/CaseStudies";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { VisualAuditShowcase } from "@/components/sections/VisualAuditShowcase";
 import { WhatYouGet } from "@/components/sections/WhatYouGet";
+import { PostcodeChecker } from "@/components/sections/PostcodeChecker";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Testimonials />
       <VisualAuditShowcase />
       <WhatYouGet />
+      <PostcodeChecker />
       <FinalCTA />
     </main>
   );

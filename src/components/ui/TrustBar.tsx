@@ -7,7 +7,7 @@ export function TrustBar() {
     <div className="w-full py-8 mt-16 md:mt-24 mb-4 border-y border-[rgba(255,255,255,0.05)] flex items-center justify-center opacity-90 relative z-20">
       <div className="max-w-7xl mx-auto px-6 w-full flex flex-col md:flex-row items-center justify-center md:justify-between gap-8 md:gap-12">
         <p className="text-xs font-semibold tracking-widest uppercase text-gray-300 whitespace-nowrap">
-          Verified Credentials
+          Operational Status
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
@@ -42,7 +42,10 @@ export function TrustBar() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-60" />
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500" />
             </span>
-            3 sites audited in the last 48&nbsp;hours
+            <span>
+              Current Pipeline: <span className="text-white font-bold">3 Audits in progress</span>
+              <span className="block text-[10px] text-gray-500 font-medium mt-0.5 tracking-wide">Next available slot: 21&nbsp;April</span>
+            </span>
           </div>
         </div>
       </div>

@@ -186,6 +186,7 @@ export function CaseStudies() {
                    { label: "LCP", before: "4.1s", after: "0.9s" },
                    { label: "Form CVR", before: "1.2%", after: "4.7%" },
                    { label: "Mobile Bounce", before: "71%", after: "28%" },
+                   { label: "Installs/mo.", before: "11", after: "+41" },
                  ].map((row) => (
                    <div key={row.label} className="grid grid-cols-3 gap-1 py-2 border-t border-white/[0.04]">
                      <span className="text-xs font-semibold text-gray-400">{row.label}</span>
@@ -193,6 +194,19 @@ export function CaseStudies() {
                      <span className="text-xs font-bold text-[#16A085] text-center">{row.after}</span>
                    </div>
                  ))}
+
+                 {/* Economic translation */}
+                 <div className="mt-3 pt-3 border-t border-[#16A085]/20 flex flex-col gap-1">
+                   <div className="flex items-center justify-between">
+                     <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Economic Impact</span>
+                     <span className="text-[10px] text-gray-600 font-medium">90-day window</span>
+                   </div>
+                   <div className="flex items-baseline justify-between mt-1">
+                     <span className="text-xs font-semibold text-white">+30 additional installs/mo.</span>
+                     <span className="text-[10px] font-bold text-[#16A085]">Est. $120K–$240K/mo.</span>
+                   </div>
+                   <p className="text-[9px] text-gray-600 font-medium tracking-wide">in recovered revenue potential &middot; avg. $4K–$8K install value</p>
+                 </div>
                </div>
              </div>
           </div>

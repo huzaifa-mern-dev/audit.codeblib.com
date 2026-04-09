@@ -163,18 +163,26 @@ export function AuditForm() {
                       />
                     </div>
 
-                    {/* Privacy micro-copy — zero CLS: static height, no layout shift */}
-                    <div className="flex flex-col gap-1.5 px-1">
+                    {/* Guarantee blocks — Standalone + Pitch Filter + Delivery */}
+                    <div className="flex flex-col gap-2 px-1">
                       {[
-                        "We analyze page speed and mobile UX only. No backend access required.",
-                        "One report email. No automated spam sequences.",
-                        "Results delivered within 2 business days.",
-                      ].map((line, idx) => (
-                        <div key={idx} className="flex items-start gap-2">
-                          <svg className="w-3 h-3 text-[#16A085] flex-shrink-0 mt-[3px]" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                          <p className="text-[11px] text-gray-500 font-medium leading-snug">{line}</p>
+                        { icon: "shield", text: "No sales calls. This audit is a standalone technical document. No follow-up unless you request it." },
+                        { icon: "filter", text: "If no clear revenue loss is identified, we won't pitch our services. We only work where we can prove massive upside." },
+                        { icon: "clock", text: "Delivered as a prioritised PDF report within 2 business days via the Revenue Leak Mapping\u2122 system." },
+                      ].map((item, idx) => (
+                        <div key={idx} className="flex items-start gap-2.5">
+                          <div className="flex-shrink-0 w-5 h-5 rounded-md bg-[#16A085]/10 border border-[#16A085]/20 flex items-center justify-center mt-[1px]">
+                            {item.icon === "shield" && (
+                              <svg className="w-3 h-3 text-[#16A085]" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                            )}
+                            {item.icon === "filter" && (
+                              <svg className="w-3 h-3 text-[#16A085]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" /></svg>
+                            )}
+                            {item.icon === "clock" && (
+                              <svg className="w-3 h-3 text-[#16A085]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            )}
+                          </div>
+                          <p className="text-[10.5px] text-gray-500 font-medium leading-snug">{item.text}</p>
                         </div>
                       ))}
                     </div>
@@ -213,7 +221,7 @@ export function AuditForm() {
                         aria-label="Unlock a sample performance audit report (PDF)"
                         className="group flex items-center gap-3 rounded-xl border border-white/[0.07] bg-white/[0.03] hover:bg-white/[0.06] hover:border-[#16A085]/30 transition-all duration-200 p-2.5 overflow-hidden"
                       >
-                        {/* Blurred preview thumbnail */}
+                        {/* Diagnostic Fragment thumbnail */}
                         <div className="relative flex-shrink-0 w-14 h-10 rounded-lg overflow-hidden bg-[#0D1720] border border-white/10">
                           <div className="absolute inset-0 flex flex-col gap-1 p-1.5">
                             <div className="h-1.5 w-full rounded bg-[#16A085]/40" />
@@ -221,11 +229,20 @@ export function AuditForm() {
                             <div className="h-1 w-full rounded bg-white/10" />
                             <div className="h-1 w-5/6 rounded bg-white/10" />
                             <div className="grid grid-cols-2 gap-1 mt-0.5">
-                              <div className="h-2.5 rounded bg-[#16A085]/25" />
+                              <div className="h-2.5 rounded bg-red-500/25" />
                               <div className="h-2.5 rounded bg-white/10" />
                             </div>
                           </div>
-                          <div className="absolute inset-0 bg-[#0D1720]/40 backdrop-blur-[1.5px]" />
+                          {/* Red annotation badges */}
+                          <div className="absolute top-0.5 right-0.5 flex flex-col gap-0.5">
+                            <div className="flex items-center gap-0.5 bg-red-500/90 rounded px-0.5 py-px">
+                              <span className="text-[5px] font-bold text-white leading-none whitespace-nowrap">3.2s delay</span>
+                            </div>
+                            <div className="flex items-center gap-0.5 bg-red-500/80 rounded px-0.5 py-px">
+                              <span className="text-[5px] font-bold text-white leading-none whitespace-nowrap">Lost here</span>
+                            </div>
+                          </div>
+                          <div className="absolute inset-0 bg-[#0D1720]/30 backdrop-blur-[1px]" />
                         </div>
                         {/* Label */}
                         <div className="flex flex-col">

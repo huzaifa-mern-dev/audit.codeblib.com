@@ -15,12 +15,12 @@ const pillars = [
       </svg>
     ),
     title: "Intent Alignment",
-    subtitle: "Does your page match the promise of your ads?",
+    subtitle: "Are the wrong people landing, or the right people confused?",
     bullets: [
-      "Keyword-to-page message match analysis",
-      "Ad scent continuity across the full funnel",
-      "Above-fold promise vs. CTA coherence audit",
-      "Landing page relevance score benchmarking",
+      "Ad-to-page message match — are Solar leads seeing Solar headlines?",
+      "Keyword scent continuity across the full enquiry funnel",
+      "Above-fold promise vs. CTA coherence — first impression audit",
+      "Landing page relevance score vs. competitor benchmarks",
     ],
   },
   {
@@ -30,13 +30,13 @@ const pillars = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
-    title: "Messaging Clarity",
-    subtitle: "Can visitors understand your value in < 3 seconds?",
+    title: "Wrong Jobs Enquiring",
+    subtitle: "Poor-fit leads wasting your quote time and ops budget.",
     bullets: [
-      "Value proposition hierarchy audit",
-      "Clarity vs. cleverness ratio check",
-      "Hick's Law application & choice reduction",
-      "Emotional resonance & benefit-led framing",
+      "Value proposition audit — are you attracting tyre-kickers or buyers?",
+      "Messaging specificity check — does copy filter for ideal job size?",
+      "Trust signal hierarchy — credibility signals driving better-fit enquiries",
+      "Benefit-led framing aligned to high-LTV residential/commercial jobs",
     ],
   },
   {
@@ -46,13 +46,13 @@ const pillars = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
     ),
-    title: "UX Suppression",
-    subtitle: "Identifying the small blockers that slow down decisions.",
+    title: "Visitors Not Reaching Contact",
+    subtitle: "Identifying every friction point stopping a phone call or form submit.",
     bullets: [
-      "Form friction & field fatigue analysis",
-      "CTA placement, contrast & copy audit",
-      "Trust signal prioritisation above the fold",
-      "Micro-interaction & visual hierarchy review",
+      "Click-to-call friction audit — how many taps to reach you on mobile?",
+      "Form field fatigue analysis — drop-off mapped per field",
+      "CTA placement and contrast — is your number above the fold on mobile?",
+      "Load time per page section — pinpointing the 3-second abandonment cliff",
     ],
   },
 ];
@@ -100,14 +100,14 @@ export function WhatYouGet() {
           transition={{ duration: 0.55 }}
         >
           <div className="mb-5 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#16A085]/10 text-sm font-semibold tracking-wide text-[#16A085] border border-[#16A085]/20">
-            Service Scope
+            Revenue Leak Mapping™
           </div>
           <h2 className="text-4xl md:text-5xl font-black text-white leading-[1.12] tracking-[-0.04em] mb-5">
             What Your Audit{" "}
             <span className="text-gradient-brand">Actually Covers</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
-            A forensic, three-pillar framework that isolates every variable suppressing your conversion rate.
+            A forensic three-pillar diagnostic that maps every point where enquiries drop before reaching your phone or email.
           </p>
         </motion.div>
 
@@ -183,7 +183,7 @@ export function WhatYouGet() {
         >
           Delivered as a{" "}
           <span className="text-gray-400 font-semibold">prioritised Loom + PDF report</span>{" "}
-          within 48 hours. Zero fluff. Actionable from page one.
+          via the Codeblib Revenue Leak Mapping™ system within 48 hours. Zero fluff. Actionable from page one.
         </motion.p>
       </div>
     </section>

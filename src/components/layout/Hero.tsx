@@ -45,7 +45,7 @@ export function Hero() {
         >
           <motion.div variants={itemVariants} className="mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-sm font-semibold tracking-wide text-gray-200 border border-white/10 backdrop-blur-sm self-start shadow-sm">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            Solar & Construction CRO Specialists
+            Solar &amp; Construction CRO Specialists
           </motion.div>
 
           <motion.h1 
@@ -68,11 +68,11 @@ export function Hero() {
             className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed font-medium max-w-lg"
           >
             Right now, your site is losing{" "}
-            <span className="text-white font-semibold">10–30% of enquiries and high-value jobs</span>{" "}
-            per month — to competitors with faster sites, cleaner funnels, and aligned intent.
+            <span className="text-white font-semibold">10–30% of enquiries</span>{" "}
+            — that’s missed site visits, lost tenders, and jobs going to competitors with faster pages.
           </motion.p>
           
-          <motion.div variants={itemVariants} className="w-full flex">
+          <motion.div variants={itemVariants} className="w-full hidden lg:flex">
              <PerformanceDiagnosticCard />
           </motion.div>
         </motion.div>
