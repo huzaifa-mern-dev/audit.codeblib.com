@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/layout/Hero";
 import { WhySitesLeak } from "@/components/sections/WhySitesLeak";
 import { CaseStudies } from "@/components/sections/CaseStudies";
+import { ProofOfExcellence } from "@/components/sections/ProofOfExcellence";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { VisualAuditShowcase } from "@/components/sections/VisualAuditShowcase";
 import { WhatYouGet } from "@/components/sections/WhatYouGet";
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero />
       <WhySitesLeak />
       <CaseStudies />
+      <ProofOfExcellence />
       <Testimonials />
       <VisualAuditShowcase />
       <WhatYouGet />
