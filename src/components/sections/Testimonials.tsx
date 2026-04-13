@@ -65,7 +65,7 @@ export function Testimonials() {
             Built for <span className="text-[var(--brand-teal)]">Technical Operators.</span>
           </h2>
           <p className="text-gray-400 font-medium max-w-xl mx-auto">
-            We don't sell 'pretty' interfaces. We engineer high-velocity lead-generation systems that mathematically guarantee results.
+            We don&apos;t sell &apos;pretty&apos; interfaces. We engineer high-velocity lead-generation systems that mathematically guarantee results.
           </p>
         </motion.div>
 
